@@ -1,0 +1,14 @@
+var localize = performance.getEntriesByType("resource")
+var geo_link = []
+
+for (var i = 0; i < localize.length; i++)
+{
+	if (localize[i]["name"].includes("GeoPhoto") == true)
+	{
+		geo_link.unshift(localize[i]["name"])
+	}
+}
+return geo_link[0]
+//window.open(geo_link[0])
+//Script JS
+
